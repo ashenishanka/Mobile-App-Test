@@ -215,17 +215,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-oI-ns6">
-                                        <rect key="frame" x="18" y="141" width="357" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-oI-ns6">
+                                        <rect key="frame" x="18" y="151" width="357" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="9Lg-z5-dEc"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="tIg-4h-stB"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create Account">
                                             <color key="baseForegroundColor" systemColor="linkColor"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnCreateAccount:" destination="sCq-Sp-Xo5" eventType="touchUpInside" id="3rb-5x-O5h"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2024 Ashen Ishanka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hv-yf-0bd">
                                         <rect key="frame" x="12" y="676" width="369" height="21"/>
@@ -252,11 +255,9 @@
                                     <constraint firstItem="c9Y-oI-ns6" firstAttribute="leading" secondItem="CCT-Js-nao" secondAttribute="leading" constant="18" id="Uuw-lI-99d"/>
                                     <constraint firstAttribute="trailing" secondItem="c9Y-oI-ns6" secondAttribute="trailing" constant="18" id="ZY0-iM-i2h"/>
                                     <constraint firstItem="aSs-5N-PeK" firstAttribute="top" secondItem="rM2-Bh-kJv" secondAttribute="bottom" constant="8" symbolic="YES" id="ch8-V8-5Nc"/>
-                                    <constraint firstItem="c9Y-oI-ns6" firstAttribute="top" secondItem="aSs-5N-PeK" secondAttribute="bottom" constant="8" symbolic="YES" id="dA0-Uu-fB0"/>
-                                    <constraint firstItem="c9Y-oI-ns6" firstAttribute="top" secondItem="aSs-5N-PeK" secondAttribute="bottom" constant="8" symbolic="YES" id="evt-QH-gq7"/>
+                                    <constraint firstItem="c9Y-oI-ns6" firstAttribute="top" secondItem="aSs-5N-PeK" secondAttribute="bottom" constant="18" id="dA0-Uu-fB0"/>
                                     <constraint firstAttribute="trailing" secondItem="aSs-5N-PeK" secondAttribute="trailing" constant="18" id="fhJ-08-8f1"/>
                                     <constraint firstAttribute="trailing" secondItem="c9Y-oI-ns6" secondAttribute="trailing" constant="18" id="hpv-VD-qK5"/>
-                                    <constraint firstItem="c9Y-oI-ns6" firstAttribute="top" secondItem="aSs-5N-PeK" secondAttribute="bottom" constant="8" symbolic="YES" id="jQI-dq-KPO"/>
                                     <constraint firstItem="aSs-5N-PeK" firstAttribute="top" secondItem="rM2-Bh-kJv" secondAttribute="bottom" constant="8" symbolic="YES" id="kEG-fj-kTb"/>
                                     <constraint firstItem="c9Y-oI-ns6" firstAttribute="leading" secondItem="CCT-Js-nao" secondAttribute="leading" constant="18" id="kcz-1v-32x"/>
                                     <constraint firstAttribute="trailing" secondItem="1hv-yf-0bd" secondAttribute="trailing" constant="12" id="lHy-Rc-8Qu"/>
@@ -279,6 +280,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create a New Account" id="HnQ-ky-kZa"/>
+                    <connections>
+                        <outlet property="emailNewAccountTextField" destination="rM2-Bh-kJv" id="3I3-d9-S0C"/>
+                        <outlet property="passwordTextField" destination="aSs-5N-PeK" id="zAN-0Y-Ya5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smk-Zm-325" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

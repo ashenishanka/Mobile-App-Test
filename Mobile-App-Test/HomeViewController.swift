@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -26,4 +26,17 @@ class HomeViewController: UIViewController {
     }
     */
 
+    @IBAction func btnLogoutClicked(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            
+        }catch{
+            print("error")
+        }
+    }
+    func openMainViewController(){
+       let vc = ViewController()
+       present(vc, animated: true)
+        
+    }
 }

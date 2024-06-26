@@ -25,9 +25,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byD-9s-Qkz">
+                    <rect key="frame" x="12" y="781" width="369" height="37"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Logout"/>
+                    <connections>
+                        <action selector="btnLogoutClicked:" destination="-1" eventType="touchUpInside" id="7wI-Kd-5Hv"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="byD-9s-Qkz" secondAttribute="trailing" constant="12" id="0X5-FN-7zR"/>
+                <constraint firstItem="byD-9s-Qkz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="LlC-8R-V5N"/>
+                <constraint firstItem="byD-9s-Qkz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="QNW-BK-Rav"/>
+            </constraints>
             <point key="canvasLocation" x="21" y="20"/>
         </view>
     </objects>
