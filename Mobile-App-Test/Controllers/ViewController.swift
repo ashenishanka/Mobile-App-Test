@@ -91,6 +91,7 @@ class ViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
           guard let strongSelf = self else { return }
+            strongSelf.dismiss(animated: true)
 //          print(authResult)
             if(error != nil){
                 strongSelf.showAlertController("Cannot login", "Please check your email or password")

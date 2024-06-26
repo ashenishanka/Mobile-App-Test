@@ -37,14 +37,16 @@ class NewAccountViewController: UIViewController {
                 self.present(alertNewAccount, animated: true)
                 
                 Auth.auth().createUser(withEmail: email, password: password){[weak self]authResult, error in
+                    guard let strongSelf = self else{
+                        return
+                    }
+                    strongSelf.dismiss(animated: true)
                     if authResult?.user != nil{
                         
-                        guard let strongSelf = self else{
-                            return
-                        }
-                        strongSelf.dismiss(animated: true)
+                        
+                        
                         let alert = UIAlertController(title:"Successful",message: "Now you can SignIn to your account", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Okay", style: .default,handler: {[weak self]_ in
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default,handler: {_ in
                             strongSelf.navigationController?.popViewController(animated: true)
                         }))
                         
@@ -52,7 +54,15 @@ class NewAccountViewController: UIViewController {
                         
                         
                     }
+                    else{
+                        strongSelf.showAlertController("Cannot create the account","Please check your email or password")
+                    }
+                    if error != nil{
+                        strongSelf.showAlertController("Cannot create the account","Please check your email or password")
+                    }
                 }
+                
+                
             }else{
                 showAlertController("Cannot create the account","Password should consist  atleast 6 character")
             }
