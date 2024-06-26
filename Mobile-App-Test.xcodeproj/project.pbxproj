@@ -21,6 +21,8 @@
 		A9C896362C2B23E200ED7EA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9C896352C2B23E200ED7EA7 /* GoogleService-Info.plist */; };
 		A9C896392C2B283800ED7EA7 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A9C896382C2B283800ED7EA7 /* GoogleSignIn */; };
 		A9C8963B2C2B327C00ED7EA7 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */; };
+		A9E117852C2BF2550033E5CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E117832C2BF2550033E5CB /* HomeViewController.swift */; };
+		A9E117862C2BF2550033E5CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E117842C2BF2550033E5CB /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		A98DC0592C2AA80E00DFAE3F /* Mobile_App_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_App_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9C896352C2B23E200ED7EA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		A9E117832C2BF2550033E5CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A9E117842C2BF2550033E5CB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				A98DC0412C2AA80E00DFAE3F /* LaunchScreen.storyboard */,
 				A98DC0442C2AA80E00DFAE3F /* Info.plist */,
 				A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */,
+				A9E117832C2BF2550033E5CB /* HomeViewController.swift */,
+				A9E117842C2BF2550033E5CB /* HomeViewController.xib */,
 			);
 			path = "Mobile-App-Test";
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			files = (
 				A98DC0402C2AA80E00DFAE3F /* Assets.xcassets in Resources */,
 				A98DC0432C2AA80E00DFAE3F /* Base in Resources */,
+				A9E117862C2BF2550033E5CB /* HomeViewController.xib in Resources */,
 				A98DC03E2C2AA80C00DFAE3F /* Base in Resources */,
 				A9C896362C2B23E200ED7EA7 /* GoogleService-Info.plist in Resources */,
 			);
@@ -280,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E117852C2BF2550033E5CB /* HomeViewController.swift in Sources */,
 				A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */,
 				A98DC0372C2AA80B00DFAE3F /* AppDelegate.swift in Sources */,
 				A98DC0392C2AA80B00DFAE3F /* SceneDelegate.swift in Sources */,
