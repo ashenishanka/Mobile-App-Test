@@ -409,7 +409,8 @@
                     <navigationItem key="navigationItem" title="Details" id="YMV-Ee-6W8">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="a1u-Dg-i6Y">
                             <connections>
-                                <segue destination="hwS-LZ-ZXa" kind="show" id="RqP-fl-SaA"/>
+                                <action selector="btnShowMapClicked:" destination="5VQ-C3-3GH" id="WvE-BK-ipM"/>
+                                <segue destination="hwS-LZ-ZXa" kind="show" identifier="showMap" id="RqP-fl-SaA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -427,7 +428,7 @@
         <!--Map-->
         <scene sceneID="zTd-vc-Y9N">
             <objects>
-                <viewController id="hwS-LZ-ZXa" sceneMemberID="viewController">
+                <viewController id="hwS-LZ-ZXa" customClass="MapViewController" customModule="Mobile_App_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXZ-d7-Jzv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,6 +448,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="yg5-94-yQk"/>
+                    <connections>
+                        <outlet property="mapView" destination="JKr-o3-bgS" id="NjJ-DH-P4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gus-QR-mod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

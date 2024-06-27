@@ -117,20 +117,20 @@ extension HotelHomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hotels.count
     }
-   
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected row")
-        //  tableView.deselectRow(at: indexPath, animated: true)
-          selectedHotel = hotels[indexPath.row]
-          self.performSegue(withIdentifier: "showHotelItem", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedHotel = hotels[indexPath.row]
+        self.performSegue(withIdentifier: "showHotelItem", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellReusableIdentifier, for: indexPath) as! HotelTableViewCell
         
         cell.hotelTitleOutlet.text = hotels[indexPath.row].title
         cell.hotelAddressTextOutlet.text = hotels[indexPath.row].address
-       
-       
+        
+        
         cell.hotelImageOutet.image = UIImage(named: "cat")
         //        cell.hotelTitleOutlet.text = hotel[indexPath.row].data[0].title
         //        cell.hotelAddressTextOutlet.text = hotel[indexPath.row].data[0].address

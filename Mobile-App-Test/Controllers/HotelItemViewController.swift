@@ -74,4 +74,17 @@ class HotelItemViewController: UIViewController {
         }.resume()
     }
 
+    @IBAction func btnShowMapClicked(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showMap", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap"{
+            if let mMapVC = segue.destination as? MapViewController{
+                mMapVC.lat = hotelItem?.latitude
+                mMapVC.lang = hotelItem?.longitude
+                mMapVC.hotelTitle = hotelItem?.title
+                mMapVC.hotelAddress = hotelItem?.address
+            }
+        }
+    }
 }
