@@ -14,8 +14,9 @@ class MapViewController: UIViewController {
     var hotelAddress: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //setting map type as apple standarad type
         mapView.mapType = .standard
+        //calling to setMap function in order to load map details
         setMap()
     }
     func setMap(){
@@ -35,7 +36,7 @@ class MapViewController: UIViewController {
         mAnnotationPointer.subtitle = hotelAddress ?? "Unable to show the address"
         //We are going to  draw the pointer in the map below
         mapView.addAnnotation(mAnnotationPointer)
-        
+        mapView.isZoomEnabled = true
     }
     @IBOutlet weak var mapView: MKMapView!
     

@@ -11,16 +11,23 @@ import GoogleSignIn
 import FirebaseAuth
 class ViewController: UIViewController {
 
+    // MARK: - Reference to UI elements
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
+    //end reference
+    
+    // MARK: - Life cycle functions
     override func viewWillAppear(_ animated: Bool) {
+        //hiding the navigation bar when view is going to appear
         navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
+        //unhide the navigation bar when view is going to disappear (going to open another view controller)
         navigationController?.navigationBar.isHidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //below codes are from Google authentication documentation that we should use when we are going to access Google Login with Firebase
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 
         // Create Google Sign In configuration object.
@@ -32,6 +39,7 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
               view.addGestureRecognizer(tapGesture)
         
+        //we are going to call userAuthenticated function to check whether current user is already authenticated or not
         userAuthenticated()
     }
     @objc func hideKeyboard() {
@@ -39,7 +47,8 @@ class ViewController: UIViewController {
             //above line will dissmiss the keyboard
        }
     @IBAction func googleSignInBtnClicked(_ sender: UIButton) {
-        // Start the sign in flow!
+        // Start the Google sign in flow!
+        //Codes are from Google authentication official page
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
             guard error == nil else {
                 return
@@ -54,15 +63,20 @@ class ViewController: UIViewController {
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                            accessToken: user.accessToken.tokenString)
             print("email is \(user.profile?.email ?? "error")")
+            //Google authentication is success
+            //Now wea are going to signin user with firebase using credentials received from the Google
             Auth.auth().signIn(with: credential) { result, error in
 
-                self.userAuthenticated()
+            
               // At this point, our user is signed in
+               //going to call userAuthenticated function to check whether authenticated and will open Home page for authenticated users
+                self.userAuthenticated()
                // print(result)
             }
                 
         }
     }
+    // MARK: - Reusable alert controller for show alert messages to users
     func showAlertController(_ title: String, _ message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default,handler: nil))
@@ -107,10 +121,13 @@ extension ViewController{
     func userAuthenticated(){
         if Auth.auth().currentUser != nil{
             //user already authenticated
+            //calling to openHomeViewController
             openHomeViewController()
         }
     }
     func openHomeViewController(){
+        //going to open Hotel Home View Controller
+        
         performSegue(withIdentifier: "openHome", sender: nil)
         
     }
