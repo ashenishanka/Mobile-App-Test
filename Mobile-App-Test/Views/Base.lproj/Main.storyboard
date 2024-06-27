@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gus-QR-mod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4100" y="-61.267605633802823"/>
+            <point key="canvasLocation" x="4211" y="-61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bjp-gM-e1v">
