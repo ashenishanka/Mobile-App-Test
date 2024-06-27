@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - This class will be responsible for show selected hotel item details, including title, descripition and option to see location in the mapp
 class HotelItemViewController: UIViewController {
 
     @IBOutlet weak var barButtonNavigation: UIBarButtonItem!
@@ -48,7 +49,7 @@ class HotelItemViewController: UIViewController {
         }
            
             
-        
+        //going to get the image data from the url then we can show that in the imageview
         let loadImageTask = URLSession.shared.dataTask(with: url){[weak self] data, response, error in
             guard let strongSelf = self else{
                 print("Error occurred")

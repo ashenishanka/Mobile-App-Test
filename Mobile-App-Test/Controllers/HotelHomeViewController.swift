@@ -83,6 +83,7 @@ class HotelHomeViewController: UIViewController {
         
     }
     func loadEmail(){
+        //going to load current user email from the firebase
         if let mAuth = Auth.auth().currentUser{
             let email = mAuth.email
             emailLabel.text = email ?? ""
