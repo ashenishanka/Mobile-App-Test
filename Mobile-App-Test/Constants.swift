@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - this K class will responsible to store constants that may frequently used by the app
 struct K{
     static let cellNibName = "HotelTableViewCell"
     static let cellReusableIdentifier = "HotelCell"

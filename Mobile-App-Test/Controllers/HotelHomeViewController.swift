@@ -8,18 +8,27 @@
 import UIKit
 import FirebaseAuth
 class HotelHomeViewController: UIViewController {
-    
+    //when hotel item is selected from the list, we have to keep track of what item user has clicked, for that below variable is declared
     var selectedHotel: HotelItem?
+    
+    //creating the Hotel service class instance
+    private var mHotelService: HotelService = HotelService(mNetworkManager: NetworkManager(apiHandler: APIHandler(), responseHandler: ResponseHandler()))
+    
     override func viewWillAppear(_ animated: Bool) {
+        //navigation bar will be hidden in the current view
         self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
+        //navigation bar will be visible in other views
         self.navigationController?.navigationBar.isHidden = false
     }
+    // MARK: - Created sample hotel item to keep remember the structure of the api
     var hotel: [HotelsData] = [
         HotelsData(data: [HotelItem(id: 1, title: "Hello World", description: "Sample Description", address: "16/3, Kendagahawatta,\n Sri Hemananda Mawatha, Galle", postcode: "80000", phoneNumber: "+94710872212", latitude: "63.860500", longitude: "95.043317", image: HotelImage(small: "http://lorempixel.com/200/200/cats/4/", medium: "http://lorempixel.com/400/400/cats/4/", large: "http://lorempixel.com/800/800/cats/4/"))])
     ]
+    //the array of hotel items that keep all hotel details fetched from the api
     var hotels: [HotelItem] = []
+    
     @IBOutlet weak var tableViewHotels: UITableView!
     @IBOutlet weak var emailLabel: UILabel!
     override func viewDidLoad() {
@@ -27,30 +36,29 @@ class HotelHomeViewController: UIViewController {
         
         loadEmail()
         setupTableView()
+       
     }
     
     func setupTableView(){
-        print("check hi")
+       
         tableViewHotels.delegate = self
-        NetworkManager(apiHandler: APIHandler(), responseHandler: ResponseHandler()).getConnect {[weak self] result in
-            guard let strongSelf = self else{
-                return
-            }
-            switch result{
-            case .success(let hotelData):
-                
-                strongSelf.hotels = hotelData.data
-                
-                DispatchQueue.main.async{
-                    strongSelf.tableViewHotels.dataSource = self
-                    
-                    strongSelf.tableViewHotels.register(UINib(nibName: K.cellNibName, bundle: nil),forCellReuseIdentifier: K.cellReusableIdentifier)
+        
+        //going to call to getAllHotels method in the hotel service. it will handle network manager class to fetch data
+        mHotelService.getAllHotels{ [weak self] result in
+            print("hotel service get all hotels method get executed")
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let hotels):
+                //data recieved. now we are going to load the data in the table
+                strongSelf.hotels = hotels
+                DispatchQueue.main.async {
+                    strongSelf.tableViewHotels.dataSource = strongSelf
+                    strongSelf.tableViewHotels.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellReusableIdentifier)
                     strongSelf.tableViewHotels.reloadData()
                 }
-            case .failure(_):
-                print("error occurred")
+            case .failure(let error):
+                print("Error occurred: \(error.localizedDescription)")
             }
-        
         }
 //        NetworkManager().getConnect {[weak self] result in
 //            guard let strongSelf = self else{

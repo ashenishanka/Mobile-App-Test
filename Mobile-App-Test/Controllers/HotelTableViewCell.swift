@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - This is a custom cell class for the Hotel Table view
 class HotelTableViewCell: UITableViewCell {
 
     @IBOutlet weak var hotelImageOutet: UIImageView!

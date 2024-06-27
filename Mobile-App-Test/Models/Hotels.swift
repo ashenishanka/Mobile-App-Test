@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// MARK: - this HotelsData will be used as the model when fetching data from Network manager
 struct HotelsData: Codable{
     let data: [HotelItem]
 }
