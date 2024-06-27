@@ -14,6 +14,7 @@
 		A963C3A22C2D51490049353D /* HotelHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A12C2D51490049353D /* HotelHomeViewController.swift */; };
 		A963C3A42C2D539C0049353D /* HotelItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A32C2D539C0049353D /* HotelItemViewController.swift */; };
 		A98398EF2C2D610D00D65E2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98398EE2C2D610D00D65E2B /* MapViewController.swift */; };
+		A98398F22C2D765A00D65E2B /* HotelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98398F12C2D765A00D65E2B /* HotelService.swift */; };
 		A98DC0372C2AA80B00DFAE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */; };
 		A98DC0392C2AA80B00DFAE3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */; };
 		A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC03A2C2AA80B00DFAE3F /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		A963C3A12C2D51490049353D /* HotelHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelHomeViewController.swift; sourceTree = "<group>"; };
 		A963C3A32C2D539C0049353D /* HotelItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelItemViewController.swift; sourceTree = "<group>"; };
 		A98398EE2C2D610D00D65E2B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A98398F12C2D765A00D65E2B /* HotelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelService.swift; sourceTree = "<group>"; };
 		A98DC0332C2AA80B00DFAE3F /* Mobile-App-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile-App-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		A98398F02C2D764300D65E2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A98398F12C2D765A00D65E2B /* HotelService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A98DC02A2C2AA80B00DFAE3F = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		A98DC0352C2AA80B00DFAE3F /* Mobile-App-Test */ = {
 			isa = PBXGroup;
 			children = (
+				A98398F02C2D764300D65E2B /* Services */,
 				A92C67DE2C2C40DE00F655A1 /* Network */,
 				A9E117892C2C1B910033E5CB /* Models */,
 				A9E117882C2C18CF0033E5CB /* Controllers */,
@@ -347,6 +358,7 @@
 				A9E1178B2C2C1BAB0033E5CB /* Hotels.swift in Sources */,
 				A9C8963B2C2B327C00ED7EA7 /* NewAccountViewController.swift in Sources */,
 				A963C3A42C2D539C0049353D /* HotelItemViewController.swift in Sources */,
+				A98398F22C2D765A00D65E2B /* HotelService.swift in Sources */,
 				A92C67DD2C2C3A7100F655A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

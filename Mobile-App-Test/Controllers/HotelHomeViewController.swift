@@ -32,7 +32,7 @@ class HotelHomeViewController: UIViewController {
     func setupTableView(){
         print("check hi")
         tableViewHotels.delegate = self
-        NetworkManager().getHotels {[weak self] result in
+        NetworkManager(apiHandler: APIHandler(), responseHandler: ResponseHandler()).getConnect {[weak self] result in
             guard let strongSelf = self else{
                 return
             }
@@ -50,7 +50,27 @@ class HotelHomeViewController: UIViewController {
             case .failure(_):
                 print("error occurred")
             }
+        
         }
+//        NetworkManager().getConnect {[weak self] result in
+//            guard let strongSelf = self else{
+//                return
+//            }
+//            switch result{
+//            case .success(let hotelData):
+//                
+//                strongSelf.hotels = hotelData.data
+//                
+//                DispatchQueue.main.async{
+//                    strongSelf.tableViewHotels.dataSource = self
+//                    
+//                    strongSelf.tableViewHotels.register(UINib(nibName: K.cellNibName, bundle: nil),forCellReuseIdentifier: K.cellReusableIdentifier)
+//                    strongSelf.tableViewHotels.reloadData()
+//                }
+//            case .failure(_):
+//                print("error occurred")
+//            }
+//        }
         
         
     }
