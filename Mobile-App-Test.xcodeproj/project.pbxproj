@@ -13,6 +13,7 @@
 		A92C67E02C2C40F100F655A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C67DF2C2C40F100F655A1 /* NetworkManager.swift */; };
 		A963C3A22C2D51490049353D /* HotelHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A12C2D51490049353D /* HotelHomeViewController.swift */; };
 		A963C3A42C2D539C0049353D /* HotelItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A32C2D539C0049353D /* HotelItemViewController.swift */; };
+		A98398EF2C2D610D00D65E2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98398EE2C2D610D00D65E2B /* MapViewController.swift */; };
 		A98DC0372C2AA80B00DFAE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */; };
 		A98DC0392C2AA80B00DFAE3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */; };
 		A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC03A2C2AA80B00DFAE3F /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		A92C67DF2C2C40F100F655A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A963C3A12C2D51490049353D /* HotelHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelHomeViewController.swift; sourceTree = "<group>"; };
 		A963C3A32C2D539C0049353D /* HotelItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelItemViewController.swift; sourceTree = "<group>"; };
+		A98398EE2C2D610D00D65E2B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A98DC0332C2AA80B00DFAE3F /* Mobile-App-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile-App-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				A98DC03A2C2AA80B00DFAE3F /* ViewController.swift */,
 				A963C3A12C2D51490049353D /* HotelHomeViewController.swift */,
 				A963C3A32C2D539C0049353D /* HotelItemViewController.swift */,
+				A98398EE2C2D610D00D65E2B /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98398EF2C2D610D00D65E2B /* MapViewController.swift in Sources */,
 				A963C3A22C2D51490049353D /* HotelHomeViewController.swift in Sources */,
 				A92C67E02C2C40F100F655A1 /* NetworkManager.swift in Sources */,
 				A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */,

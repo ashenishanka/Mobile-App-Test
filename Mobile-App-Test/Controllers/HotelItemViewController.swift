@@ -34,15 +34,21 @@ class HotelItemViewController: UIViewController {
         if hotelItem?.title.isEmpty == true || hotelItem?.description.isEmpty == true{
             showAlertController("Error", "Unable to show Hotel details")
         }
+        else{
+            hotelTitle.text = hotelItem?.title
+            hotelDescription.text = hotelItem?.description
+        }
     }
     func loadHotelImage(){
         
         guard let url = URL(string: hotelItem?.image.large ?? "") else{
             self.hotelImage.image = UIImage(named: "cat_thumbnail")
-            }
             print("Wrong url")
             return
         }
+           
+            
+        
         let loadImageTask = URLSession.shared.dataTask(with: url){[weak self] data, response, error in
             guard let strongSelf = self else{
                 print("Error occurred")

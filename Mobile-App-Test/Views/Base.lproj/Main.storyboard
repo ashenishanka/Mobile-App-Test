@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -406,7 +407,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="YMV-Ee-6W8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="a1u-Dg-i6Y"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="a1u-Dg-i6Y">
+                            <connections>
+                                <segue destination="hwS-LZ-ZXa" kind="show" id="RqP-fl-SaA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barButtonNavigation" destination="a1u-Dg-i6Y" id="FCy-Xm-pf2"/>
@@ -418,6 +423,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHg-3J-r3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3435.8778625954196" y="-86.619718309859152"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="zTd-vc-Y9N">
+            <objects>
+                <viewController id="hwS-LZ-ZXa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rXZ-d7-Jzv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-o3-bgS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zx5-Rl-ndZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zx5-Rl-ndZ" firstAttribute="trailing" secondItem="JKr-o3-bgS" secondAttribute="trailing" id="guR-yU-rbx"/>
+                            <constraint firstItem="JKr-o3-bgS" firstAttribute="leading" secondItem="Zx5-Rl-ndZ" secondAttribute="leading" id="lke-lk-7cl"/>
+                            <constraint firstItem="JKr-o3-bgS" firstAttribute="bottom" secondItem="Zx5-Rl-ndZ" secondAttribute="bottom" id="mh5-Bl-AEV"/>
+                            <constraint firstItem="JKr-o3-bgS" firstAttribute="top" secondItem="Zx5-Rl-ndZ" secondAttribute="top" id="wHx-cZ-8qr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="yg5-94-yQk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gus-QR-mod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4100" y="-61.267605633802823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bjp-gM-e1v">
@@ -448,13 +481,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
