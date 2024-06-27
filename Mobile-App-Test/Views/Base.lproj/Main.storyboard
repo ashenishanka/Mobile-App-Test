@@ -179,6 +179,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="6eN-Z3-xtC" id="nGY-qd-E3d"/>
                         <outlet property="userNameTextField" destination="igo-fW-u8g" id="yvQ-q9-HI0"/>
+                        <segue destination="3UJ-gr-JFN" kind="show" identifier="openHome" id="1Wu-yD-h4D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -289,6 +290,135 @@
             </objects>
             <point key="canvasLocation" x="1729.0076335877861" y="15.492957746478874"/>
         </scene>
+        <!--Hotel Home View Controller-->
+        <scene sceneID="8FZ-fQ-4Ou">
+            <objects>
+                <viewController id="3UJ-gr-JFN" customClass="HotelHomeViewController" customModule="Mobile_App_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5RU-ZQ-Jls">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQD-sb-zkp">
+                                <rect key="frame" x="12" y="781" width="369" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Logout"/>
+                                <connections>
+                                    <action selector="btnLogoutClicked:" destination="3UJ-gr-JFN" eventType="touchUpInside" id="bki-xZ-SY8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghU-rh-Ut5">
+                                <rect key="frame" x="12" y="115" width="369" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NJY-ew-dHe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Db-iw-uV3">
+                                <rect key="frame" x="0.0" y="154" width="393" height="590"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV2-G4-j5n">
+                                <rect key="frame" x="12" y="752" width="369" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="irh-Vg-WtD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QM6-K1-DQ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DV2-G4-j5n" firstAttribute="top" secondItem="0Db-iw-uV3" secondAttribute="bottom" constant="8" symbolic="YES" id="3SQ-ew-pg3"/>
+                            <constraint firstItem="0Db-iw-uV3" firstAttribute="top" secondItem="ghU-rh-Ut5" secondAttribute="bottom" constant="18" id="60Z-vH-epG"/>
+                            <constraint firstItem="aQD-sb-zkp" firstAttribute="leading" secondItem="QM6-K1-DQ3" secondAttribute="leading" constant="12" id="ABE-cA-kX8"/>
+                            <constraint firstItem="aQD-sb-zkp" firstAttribute="bottom" secondItem="QM6-K1-DQ3" secondAttribute="bottom" id="AD2-jM-Baz"/>
+                            <constraint firstItem="aQD-sb-zkp" firstAttribute="top" secondItem="DV2-G4-j5n" secondAttribute="bottom" constant="8" symbolic="YES" id="CiT-ih-8HB"/>
+                            <constraint firstItem="QM6-K1-DQ3" firstAttribute="trailing" secondItem="DV2-G4-j5n" secondAttribute="trailing" constant="12" id="Drn-97-fNS"/>
+                            <constraint firstItem="QM6-K1-DQ3" firstAttribute="trailing" secondItem="aQD-sb-zkp" secondAttribute="trailing" constant="12" id="PyG-fk-wNL"/>
+                            <constraint firstItem="0Db-iw-uV3" firstAttribute="leading" secondItem="QM6-K1-DQ3" secondAttribute="leading" id="U48-Ff-goa"/>
+                            <constraint firstItem="0Db-iw-uV3" firstAttribute="trailing" secondItem="QM6-K1-DQ3" secondAttribute="trailing" id="W6z-Cy-DFO"/>
+                            <constraint firstItem="ghU-rh-Ut5" firstAttribute="leading" secondItem="QM6-K1-DQ3" secondAttribute="leading" constant="12" id="YxO-sH-KSe"/>
+                            <constraint firstItem="DV2-G4-j5n" firstAttribute="leading" secondItem="QM6-K1-DQ3" secondAttribute="leading" constant="12" id="gfP-Cg-o6X"/>
+                            <constraint firstItem="QM6-K1-DQ3" firstAttribute="trailing" secondItem="ghU-rh-Ut5" secondAttribute="trailing" constant="12" id="hZw-oR-DQE"/>
+                            <constraint firstItem="ghU-rh-Ut5" firstAttribute="top" secondItem="QM6-K1-DQ3" secondAttribute="top" constant="12" id="mXD-YG-z1n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SSN-tF-EXH"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="DV2-G4-j5n" id="Xv4-vZ-oIm"/>
+                        <outlet property="tableViewHotels" destination="0Db-iw-uV3" id="SXP-bB-a8K"/>
+                        <segue destination="5VQ-C3-3GH" kind="show" identifier="showHotelItem" id="mKW-sI-Wgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIL-tk-V8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="60"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="eEa-0f-eyx">
+            <objects>
+                <viewController id="5VQ-C3-3GH" customClass="HotelItemViewController" customModule="Mobile_App_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZE-wT-iNl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXx-r1-tWL">
+                                <rect key="frame" x="12" y="115" width="369" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="48d-Ey-KSc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-rn-vhW">
+                                <rect key="frame" x="12" y="327" width="369" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aZA-9r-jqk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai1-Kh-dBJ">
+                                <rect key="frame" x="12" y="380" width="369" height="450"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UEm-P0-jNZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ai1-Kh-dBJ" firstAttribute="leading" secondItem="UEm-P0-jNZ" secondAttribute="leading" constant="12" id="Ksg-CZ-Zgt"/>
+                            <constraint firstItem="ai1-Kh-dBJ" firstAttribute="top" secondItem="Jvz-rn-vhW" secondAttribute="bottom" constant="8" symbolic="YES" id="OSu-EH-vGN"/>
+                            <constraint firstItem="UEm-P0-jNZ" firstAttribute="trailing" secondItem="WXx-r1-tWL" secondAttribute="trailing" constant="12" id="QGI-GL-2ce"/>
+                            <constraint firstItem="WXx-r1-tWL" firstAttribute="leading" secondItem="UEm-P0-jNZ" secondAttribute="leading" constant="12" id="dbT-AZ-QEg"/>
+                            <constraint firstItem="UEm-P0-jNZ" firstAttribute="trailing" secondItem="ai1-Kh-dBJ" secondAttribute="trailing" constant="12" id="eK9-dD-SNO"/>
+                            <constraint firstItem="WXx-r1-tWL" firstAttribute="top" secondItem="UEm-P0-jNZ" secondAttribute="top" constant="12" id="gJd-U0-kgn"/>
+                            <constraint firstItem="ai1-Kh-dBJ" firstAttribute="bottom" secondItem="UEm-P0-jNZ" secondAttribute="bottom" constant="12" id="jsg-Wd-x8u"/>
+                            <constraint firstItem="Jvz-rn-vhW" firstAttribute="leading" secondItem="UEm-P0-jNZ" secondAttribute="leading" constant="12" id="kt8-Ru-hXr"/>
+                            <constraint firstItem="Jvz-rn-vhW" firstAttribute="top" secondItem="WXx-r1-tWL" secondAttribute="bottom" constant="12" id="mbr-Le-Jjq"/>
+                            <constraint firstItem="UEm-P0-jNZ" firstAttribute="trailing" secondItem="Jvz-rn-vhW" secondAttribute="trailing" constant="12" id="xvS-xI-PLZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="YMV-Ee-6W8">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="a1u-Dg-i6Y"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtonNavigation" destination="a1u-Dg-i6Y" id="FCy-Xm-pf2"/>
+                        <outlet property="hotelDescription" destination="ai1-Kh-dBJ" id="eCa-1p-rTU"/>
+                        <outlet property="hotelImage" destination="WXx-r1-tWL" id="fo5-pu-0BX"/>
+                        <outlet property="hotelTitle" destination="Jvz-rn-vhW" id="e24-i4-7cL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHg-3J-r3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435.8778625954196" y="-86.619718309859152"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bjp-gM-e1v">
             <objects>
@@ -314,14 +444,17 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

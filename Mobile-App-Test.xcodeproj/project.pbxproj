@@ -11,6 +11,8 @@
 		A92C67DB2C2C34A500F655A1 /* HotelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92C67D92C2C34A500F655A1 /* HotelTableViewCell.xib */; };
 		A92C67DD2C2C3A7100F655A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C67DC2C2C3A7100F655A1 /* Constants.swift */; };
 		A92C67E02C2C40F100F655A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C67DF2C2C40F100F655A1 /* NetworkManager.swift */; };
+		A963C3A22C2D51490049353D /* HotelHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A12C2D51490049353D /* HotelHomeViewController.swift */; };
+		A963C3A42C2D539C0049353D /* HotelItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963C3A32C2D539C0049353D /* HotelItemViewController.swift */; };
 		A98DC0372C2AA80B00DFAE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */; };
 		A98DC0392C2AA80B00DFAE3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */; };
 		A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC03A2C2AA80B00DFAE3F /* ViewController.swift */; };
@@ -25,8 +27,6 @@
 		A9C896362C2B23E200ED7EA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9C896352C2B23E200ED7EA7 /* GoogleService-Info.plist */; };
 		A9C896392C2B283800ED7EA7 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A9C896382C2B283800ED7EA7 /* GoogleSignIn */; };
 		A9C8963B2C2B327C00ED7EA7 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */; };
-		A9E117852C2BF2550033E5CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E117832C2BF2550033E5CB /* HomeViewController.swift */; };
-		A9E117862C2BF2550033E5CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E117842C2BF2550033E5CB /* HomeViewController.xib */; };
 		A9E1178B2C2C1BAB0033E5CB /* Hotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1178A2C2C1BAB0033E5CB /* Hotels.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,8 @@
 		A92C67D92C2C34A500F655A1 /* HotelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelTableViewCell.xib; sourceTree = "<group>"; };
 		A92C67DC2C2C3A7100F655A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A92C67DF2C2C40F100F655A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A963C3A12C2D51490049353D /* HotelHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelHomeViewController.swift; sourceTree = "<group>"; };
+		A963C3A32C2D539C0049353D /* HotelItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelItemViewController.swift; sourceTree = "<group>"; };
 		A98DC0332C2AA80B00DFAE3F /* Mobile-App-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile-App-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98DC0362C2AA80B00DFAE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A98DC0382C2AA80B00DFAE3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +69,6 @@
 		A98DC0592C2AA80E00DFAE3F /* Mobile_App_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_App_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9C896352C2B23E200ED7EA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
-		A9E117832C2BF2550033E5CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A9E117842C2BF2550033E5CB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A9E1178A2C2C1BAB0033E5CB /* Hotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				A98DC03C2C2AA80C00DFAE3F /* Main.storyboard */,
-				A9E117842C2BF2550033E5CB /* HomeViewController.xib */,
 				A92C67D92C2C34A500F655A1 /* HotelTableViewCell.xib */,
 			);
 			path = Views;
@@ -178,8 +177,9 @@
 			children = (
 				A92C67D82C2C34A500F655A1 /* HotelTableViewCell.swift */,
 				A9C8963A2C2B327C00ED7EA7 /* NewAccountViewController.swift */,
-				A9E117832C2BF2550033E5CB /* HomeViewController.swift */,
 				A98DC03A2C2AA80B00DFAE3F /* ViewController.swift */,
+				A963C3A12C2D51490049353D /* HotelHomeViewController.swift */,
+				A963C3A32C2D539C0049353D /* HotelItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,7 +308,6 @@
 				A92C67DB2C2C34A500F655A1 /* HotelTableViewCell.xib in Resources */,
 				A98DC0402C2AA80E00DFAE3F /* Assets.xcassets in Resources */,
 				A98DC0432C2AA80E00DFAE3F /* Base in Resources */,
-				A9E117862C2BF2550033E5CB /* HomeViewController.xib in Resources */,
 				A98DC03E2C2AA80C00DFAE3F /* Base in Resources */,
 				A9C896362C2B23E200ED7EA7 /* GoogleService-Info.plist in Resources */,
 			);
@@ -335,14 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A963C3A22C2D51490049353D /* HotelHomeViewController.swift in Sources */,
 				A92C67E02C2C40F100F655A1 /* NetworkManager.swift in Sources */,
-				A9E117852C2BF2550033E5CB /* HomeViewController.swift in Sources */,
 				A98DC03B2C2AA80B00DFAE3F /* ViewController.swift in Sources */,
 				A98DC0372C2AA80B00DFAE3F /* AppDelegate.swift in Sources */,
 				A92C67DA2C2C34A500F655A1 /* HotelTableViewCell.swift in Sources */,
 				A98DC0392C2AA80B00DFAE3F /* SceneDelegate.swift in Sources */,
 				A9E1178B2C2C1BAB0033E5CB /* Hotels.swift in Sources */,
 				A9C8963B2C2B327C00ED7EA7 /* NewAccountViewController.swift in Sources */,
+				A963C3A42C2D539C0049353D /* HotelItemViewController.swift in Sources */,
 				A92C67DD2C2C3A7100F655A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

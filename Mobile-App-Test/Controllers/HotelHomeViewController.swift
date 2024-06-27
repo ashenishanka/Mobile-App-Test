@@ -7,9 +7,15 @@
 
 import UIKit
 import FirebaseAuth
-class HomeViewController: UIViewController {
+class HotelHomeViewController: UIViewController {
     
-    
+    var selectedHotel: HotelItem?
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
     var hotel: [HotelsData] = [
         HotelsData(data: [HotelItem(id: 1, title: "Hello World", description: "Sample Description", address: "16/3, Kendagahawatta,\n Sri Hemananda Mawatha, Galle", postcode: "80000", phoneNumber: "+94710872212", latitude: "63.860500", longitude: "95.043317", image: HotelImage(small: "http://lorempixel.com/200/200/cats/4/", medium: "http://lorempixel.com/400/400/cats/4/", large: "http://lorempixel.com/800/800/cats/4/"))])
     ]
@@ -25,6 +31,7 @@ class HomeViewController: UIViewController {
     
     func setupTableView(){
         print("check hi")
+        tableViewHotels.delegate = self
         NetworkManager().getHotels {[weak self] result in
             guard let strongSelf = self else{
                 return
@@ -36,7 +43,7 @@ class HomeViewController: UIViewController {
                 
                 DispatchQueue.main.async{
                     strongSelf.tableViewHotels.dataSource = self
-                    strongSelf.tableViewHotels.delegate = self
+                    
                     strongSelf.tableViewHotels.register(UINib(nibName: K.cellNibName, bundle: nil),forCellReuseIdentifier: K.cellReusableIdentifier)
                     strongSelf.tableViewHotels.reloadData()
                 }
@@ -50,7 +57,7 @@ class HomeViewController: UIViewController {
     func loadEmail(){
         if let mAuth = Auth.auth().currentUser{
             let email = mAuth.email
-            emailLabel.text = email
+            emailLabel.text = email ?? ""
         }
     }
     /*
@@ -105,12 +112,17 @@ class HomeViewController: UIViewController {
         }
     }
 }
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
+extension HotelHomeViewController: UITableViewDataSource, UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hotels.count
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected row")
+        //  tableView.deselectRow(at: indexPath, animated: true)
+          selectedHotel = hotels[indexPath.row]
+          self.performSegue(withIdentifier: "showHotelItem", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellReusableIdentifier, for: indexPath) as! HotelTableViewCell
@@ -126,7 +138,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         
         return cell
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHotelItem"{
+            if let hotelItemVC = segue.destination as? HotelItemViewController{
+                hotelItemVC.hotelItem = selectedHotel
+                
+            }
+        }
+    }
     
 }
 

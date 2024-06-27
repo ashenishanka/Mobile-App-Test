@@ -111,13 +111,7 @@ extension ViewController{
         }
     }
     func openHomeViewController(){
-       let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-       // self.present(homeViewController, animated: true)
-        if let navigationController = self.navigationController{
-            navigationController.setViewControllers([homeViewController], animated: true)
-        }else{
-            showAlertController("Error", "Functional error! Please contact the developer")
-        }
+        performSegue(withIdentifier: "openHome", sender: nil)
         
     }
 }
