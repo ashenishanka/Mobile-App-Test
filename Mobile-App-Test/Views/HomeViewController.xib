@@ -68,8 +68,17 @@
                 <constraint firstItem="g1c-iM-n3k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="tro-9u-xh6"/>
                 <constraint firstItem="g1c-iM-n3k" firstAttribute="top" secondItem="PoL-25-C7N" secondAttribute="bottom" constant="8" symbolic="YES" id="xe5-Bw-R9J"/>
             </constraints>
-            <point key="canvasLocation" x="26.717557251908396" y="-68.309859154929583"/>
+            <point key="canvasLocation" x="-10" y="-144"/>
         </view>
+        <viewController id="PBQ-X8-cab">
+            <view key="view" contentMode="scaleToFill" id="k4Z-tH-LcL">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewLayoutGuide key="safeArea" id="YnR-Jl-IcO"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            </view>
+            <point key="canvasLocation" x="1120" y="-71"/>
+        </viewController>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
